@@ -1,5 +1,5 @@
-package com.corpzee.GST;
 
+package com.corpzee.GST;
 import com.corpzee.base.BaseTest;
 import com.corpzee.pages.DashboardPage;
 import com.corpzee.pages.GSTRegistrationPage;

@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.corpzee.tests.FligtBooking">
+      <class name="com.corpzee.tests.ITFilingTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="verifyFlightBookingSearch"/>
+          <include name="setup"/>
+          <include name="itFilingTest"/>
         </methods>
-      </class> <!-- com.corpzee.tests.FligtBooking -->
+      </class> <!-- com.corpzee.tests.ITFilingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

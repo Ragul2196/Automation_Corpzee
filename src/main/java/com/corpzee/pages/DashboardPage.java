@@ -19,7 +19,10 @@ public class DashboardPage extends BaseTest {
     private By travelPackage = By.id("package-Travel");
     private By flightService = By.id("direct-service-Flight Ticket Booking");
     
-    
+    //IT Filing
+	private By ClickIT = By.id("subcategory-IT");
+	private By ITFilingService = By.id("service-IT Filing");
+	
     
 
     /**
@@ -60,5 +63,39 @@ public class DashboardPage extends BaseTest {
         scrollIntoView(flight);
         jsClick(flight);
     }
+    
+/*
+ * IT Fliling
+ * */
+    
+	public void OpenTaxITFliling() {
+		
+		WebElement tax = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(taxPackage));
+
+    scrollIntoView(tax);
+    jsClick(tax);
+    
+    WebElement IT = wait.until(
+            ExpectedConditions.elementToBeClickable(ClickIT));
+
+    scrollIntoView(IT);
+    jsClick(IT);
+    
+    
+    WebElement ITFiling = wait.until(
+            ExpectedConditions.elementToBeClickable(ITFilingService));
+
+    scrollIntoView(ITFiling);
+    jsClick(ITFiling);
+	
+	
+	}
+    
+    
+    
+    
+    
+    
     
 }
