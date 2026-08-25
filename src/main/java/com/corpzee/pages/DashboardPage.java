@@ -12,8 +12,11 @@ public class DashboardPage extends BaseTest {
     // Tax Package
     public By taxPackage = By.id("package-Tax");
 
-    // GST Registration Service
+    // GST Services
     public By gstRegistration = By.id("service-Registration");
+    
+    public By gstCancellation = By.id("service-Cancellation");
+    
 
     // Flight
     public By travelPackage = By.id("package-Travel");
@@ -39,6 +42,23 @@ public class DashboardPage extends BaseTest {
 
         WebElement registration = wait.until(
                 ExpectedConditions.elementToBeClickable(gstRegistration));
+
+        scrollIntoView(registration);
+        jsClick(registration);
+    }
+    
+    
+    
+    public void openGSTCancellation() {
+
+        WebElement tax = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(taxPackage));
+
+        scrollIntoView(tax);
+        jsClick(tax);
+
+        WebElement registration = wait.until(
+                ExpectedConditions.elementToBeClickable(gstCancellation));
 
         scrollIntoView(registration);
         jsClick(registration);
