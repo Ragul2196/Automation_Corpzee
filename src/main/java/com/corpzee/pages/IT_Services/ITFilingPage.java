@@ -391,11 +391,6 @@ public class ITFilingPage {
         return selectedIncome;
     }
     
-    
-    
-    
-    
-    
     public void clickSubmit() {
         wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
     }

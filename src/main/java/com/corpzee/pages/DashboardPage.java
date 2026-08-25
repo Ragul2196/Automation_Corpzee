@@ -10,20 +10,21 @@ import com.corpzee.utils.WaitUtils;
 public class DashboardPage extends BaseTest {
 
     // Tax Package
-    private By taxPackage = By.id("package-Tax");
+    public By taxPackage = By.id("package-Tax");
 
     // GST Registration Service
-    private By gstRegistration = By.id("service-Registration");
+    public By gstRegistration = By.id("service-Registration");
 
     // Flight
-    private By travelPackage = By.id("package-Travel");
-    private By flightService = By.id("direct-service-Flight Ticket Booking");
+    public By travelPackage = By.id("package-Travel");
+    public By flightService = By.id("direct-service-Flight Ticket Booking");
     
     //IT Filing
-	private By ClickIT = By.id("subcategory-IT");
-	private By ITFilingService = By.id("service-IT Filing");
+	public By ClickIT = By.id("subcategory-IT");
+	public By ITFilingService = By.id("service-IT Filing");
 	
-    
+    //IT Notice
+	public By ITNotice = By.id("service-Notice & Compliance");
 
     /**
      * Open GST Registration
@@ -91,11 +92,34 @@ public class DashboardPage extends BaseTest {
 	
 	
 	}
+	
+/*
+ * IT Notice
+ * */
+	
+public void OpenTaxITNotice() {
+		
+		WebElement tax = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(taxPackage));
+
+    scrollIntoView(tax);
+    jsClick(tax);
+    
+    WebElement IT = wait.until(
+            ExpectedConditions.elementToBeClickable(ClickIT));
+
+    scrollIntoView(IT);
+    jsClick(IT);
     
     
-    
-    
-    
+    WebElement ITFiling = wait.until(
+            ExpectedConditions.elementToBeClickable(ITNotice));
+
+    scrollIntoView(ITFiling);
+    jsClick(ITFiling);
+	
+	
+	}
     
     
 }

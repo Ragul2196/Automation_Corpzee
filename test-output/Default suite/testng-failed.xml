@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.corpzee.tests.ITFilingTest">
+      <class name="com.corpzee.tests.ITNoticeTest">
         <methods>
+          <include name="ITNoticeTest"/>
           <include name="setup"/>
-          <include name="itFilingTest"/>
         </methods>
-      </class> <!-- com.corpzee.tests.ITFilingTest -->
+      </class> <!-- com.corpzee.tests.ITNoticeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
