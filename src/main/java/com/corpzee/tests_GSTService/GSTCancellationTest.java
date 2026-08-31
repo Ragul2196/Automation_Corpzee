@@ -1,4 +1,4 @@
-package com.corpzee.tests;
+package com.corpzee.tests_GSTService;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -46,7 +46,7 @@ public class GSTCancellationTest extends BaseTest{
 		     
 		     gst.enterOtherReason("YOUR SCRIPT WORKS FINE");
 		     
-		    gst	.clickSubmit();
+		     gst	.clickSubmit();
 
 		    String serviceCharge = gst.confirmServiceCharge();
 
@@ -57,5 +57,7 @@ public class GSTCancellationTest extends BaseTest{
 	         String successMessage = gst.handleSuccessMessage();
 
 	         System.out.println("Success Message: " + successMessage);
+	         
+	         
 }
 }

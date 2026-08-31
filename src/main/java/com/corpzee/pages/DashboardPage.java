@@ -17,6 +17,7 @@ public class DashboardPage extends BaseTest {
     
     public By gstCancellation = By.id("service-Cancellation");
     
+    public By openGSTFiling = By.id("service-GST Filing");    
 
     // Flight
     public By travelPackage = By.id("package-Travel");
@@ -57,11 +58,29 @@ public class DashboardPage extends BaseTest {
         scrollIntoView(tax);
         jsClick(tax);
 
-        WebElement registration = wait.until(
+        WebElement Cancellation = wait.until(
                 ExpectedConditions.elementToBeClickable(gstCancellation));
 
-        scrollIntoView(registration);
-        jsClick(registration);
+        scrollIntoView(Cancellation);
+        jsClick(Cancellation);
+    }
+    
+    
+    /*GST Filing*/
+    
+    public void openGSTFiling() {
+
+        WebElement tax = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(taxPackage));
+
+        scrollIntoView(tax);
+        jsClick(tax);
+
+        WebElement Filing = wait.until(
+                ExpectedConditions.elementToBeClickable(openGSTFiling));
+
+        scrollIntoView(Filing);
+        jsClick(Filing);
     }
 
     

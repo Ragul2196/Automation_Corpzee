@@ -235,25 +235,21 @@ public class ITNoticePage {
 	    
 	    public String handleSuccessMessage() {
 
-	        // Wait for success popup message
+
 	        By successMessage = By.xpath(
-	            "//*[contains(normalize-space(), 'Your details have been submitted successfully') " +
-	            "and contains(normalize-space(), 'IT Notice Compliance history list page')]"
+	            "//*[contains(text(),'Your details have been submitted successfully.') " +
+	            "and contains(text(),'IT Notice Compliance history list page')]"
 	        );
 
 	        WebElement message = wait.until(
 	            ExpectedConditions.visibilityOfElementLocated(successMessage)
 	        );
 
-	        String successText = message.getText();
+	        String successText = message.getText().trim();
 
-	        // Print only the success message
-	        System.out.println("Success Message: " + successText);
+	        System.out.println(successText);
 
-	        // Click OK
-	        By okButton = By.xpath(
-	            "//button[normalize-space()='OK']"
-	        );
+	        By okButton = By.xpath("//button[normalize-space()='OK']");
 
 	        wait.until(
 	            ExpectedConditions.elementToBeClickable(okButton)

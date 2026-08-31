@@ -34,9 +34,13 @@ public class ITNoticeTest extends BaseTest{
 
          // Fill form fields
          noticeCompliance.enterApplicantName("Rahul Kumar");
+         
          noticeCompliance.enterPanNumber("ABCDE1234F");
+         
          noticeCompliance.selectDateOfBirth("11-03-2005");
+         
          noticeCompliance.enterMobileNumber("9876543210");
+         
          noticeCompliance.enterEmail("rahul.test@example.com");
 
          // Select dropdowns
@@ -52,13 +56,10 @@ public class ITNoticeTest extends BaseTest{
 
          String serviceCharge = noticeCompliance.confirmServiceCharge();
 
-         System.out.println("Final Service Charge = ₹" + serviceCharge);
-         
-         
-         
          String successMessage = noticeCompliance.handleSuccessMessage();
 
-         System.out.println("Success Message: " + successMessage);
+         System.out.println("Final Service Charge = ₹" + serviceCharge);
+         
      }
     
 

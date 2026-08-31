@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.corpzee.tests.GSTCancellationTest">
+      <class name="com.corpzee.tests_GSTService.GstFilingTest">
         <methods>
+          <include name="gstfilingTest"/>
           <include name="setup"/>
-          <include name="gstCancellationTest"/>
         </methods>
-      </class> <!-- com.corpzee.tests.GSTCancellationTest -->
+      </class> <!-- com.corpzee.tests_GSTService.GstFilingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
