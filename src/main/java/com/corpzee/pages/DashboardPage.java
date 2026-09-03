@@ -17,7 +17,18 @@ public class DashboardPage extends BaseTest {
     
     public By gstCancellation = By.id("service-Cancellation");
     
-    public By openGSTFiling = By.id("service-GST Filing");    
+    public By openGSTFiling = By.id("service-GST Filing");  
+    
+    public By gstAmendment = By.id("service-GST Amendment");  
+    
+    
+    //Secure Package
+    
+    public By Securepackage = By.id("package-Secure");
+    
+    
+    public By AntivurusService = By.id("direct-service-Anti-Virus");
+    
 
     // Flight
     public By travelPackage = By.id("package-Travel");
@@ -29,6 +40,59 @@ public class DashboardPage extends BaseTest {
 	
     //IT Notice
 	public By ITNotice = By.id("service-Notice & Compliance");
+	
+	
+	
+	
+	
+	//Secure Service	
+	
+	public void openAntivirus() {
+		
+		
+		WebElement tax = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(Securepackage));
+
+        scrollIntoView(tax);
+        jsClick(tax);
+
+        WebElement antiVirus = wait.until(
+                ExpectedConditions.elementToBeClickable(AntivurusService));
+
+        scrollIntoView(antiVirus);
+        jsClick(antiVirus);
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	//GST Amendment
+	
+	
+	public void openGSTAmendment() {
+
+        WebElement tax = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(taxPackage));
+
+        scrollIntoView(tax);
+        jsClick(tax);
+
+        WebElement Cancellation = wait.until(
+                ExpectedConditions.elementToBeClickable(gstAmendment));
+
+        scrollIntoView(Cancellation);
+        jsClick(Cancellation);
+    }
+	
+	
+	
+	
+	
 
     /**
      * Open GST Registration

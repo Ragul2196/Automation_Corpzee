@@ -17,8 +17,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class GstFilingPage {
 
-    public WebDriver driver;
-    public WebDriverWait wait;
+     WebDriver driver;
+    WebDriverWait wait;
 
     // Constructor
     public GstFilingPage(WebDriver driver) {
@@ -312,6 +312,5 @@ public class GstFilingPage {
         return text;
     }
     }
-    
    
-    
+

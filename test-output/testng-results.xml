@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-31T18:23:24 IST" name="Default suite" finished-at="2026-08-31T18:24:00 IST" duration-ms="35377">
+  <suite started-at="2026-09-02T13:52:07 IST" name="Default suite" finished-at="2026-09-02T13:53:00 IST" duration-ms="53399">
     <groups>
     </groups>
-    <test started-at="2026-08-31T18:23:24 IST" name="Default test" finished-at="2026-08-31T18:24:00 IST" duration-ms="35377">
-      <class name="com.corpzee.tests_GSTService.GstFilingTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.corpzee.tests_GSTService.GstFilingTest@45c7e403]" started-at="2026-08-31T18:23:24 IST" name="setup" finished-at="2026-08-31T18:23:31 IST" duration-ms="6970" status="PASS">
+    <test started-at="2026-09-02T13:52:07 IST" name="Default test" finished-at="2026-09-02T13:53:00 IST" duration-ms="53399">
+      <class name="com.corpzee.tests.AntiVirusTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.corpzee.tests.AntiVirusTest@45c7e403]" started-at="2026-09-02T13:52:07 IST" name="setup" finished-at="2026-09-02T13:52:36 IST" duration-ms="28975" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="gstfilingTest()[pri:0, instance:com.corpzee.tests_GSTService.GstFilingTest@45c7e403]" started-at="2026-08-31T18:23:31 IST" name="gstfilingTest" finished-at="2026-08-31T18:24:00 IST" duration-ms="28300" status="PASS">
+        <test-method signature="antivirusTest()[pri:0, instance:com.corpzee.tests.AntiVirusTest@45c7e403]" started-at="2026-09-02T13:52:36 IST" name="antivirusTest" finished-at="2026-09-02T13:53:00 IST" duration-ms="24305" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- gstfilingTest -->
-      </class> <!-- com.corpzee.tests_GSTService.GstFilingTest -->
+        </test-method> <!-- antivirusTest -->
+      </class> <!-- com.corpzee.tests.AntiVirusTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
