@@ -1,4 +1,4 @@
-package com.corpzee.tests_GSTService;
+package com.corpzee.tests.GstTest;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;

@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.corpzee.tests.AntiVirusTest">
+      <class name="com.corpzee.tests.AssetManagementTest">
         <methods>
+          <include name="createFiveAssetsTest"/>
           <include name="setup"/>
-          <include name="antivirusTest"/>
         </methods>
-      </class> <!-- com.corpzee.tests.AntiVirusTest -->
+      </class> <!-- com.corpzee.tests.AssetManagementTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

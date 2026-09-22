@@ -20,7 +20,6 @@ public class ITFilingTest extends BaseTest {
 		launchBrowser();
 	}
 	
-
     @Test
     public void itFilingTest() {
     	

@@ -1,4 +1,4 @@
-package com.corpzee.tests_GSTService;
+package com.corpzee.tests.GstTest;
 
 public class GSTRegistrationTest {
 

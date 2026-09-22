@@ -42,6 +42,37 @@ public class DashboardPage extends BaseTest {
 	public By ITNotice = By.id("service-Notice & Compliance");
 	
 	
+	//Asset Management
+	public By AssetServiceManagement = By.id("package-Asset");
+	
+	public By AssetService = By.id("direct-service-Asset");
+	
+	
+	
+	//Asset Management 
+	
+	
+
+	public void openAsset() {
+		
+		
+		WebElement AssetManagement = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(AssetServiceManagement));
+
+        scrollIntoView(AssetManagement);
+        jsClick(AssetManagement);
+
+        WebElement Asset = wait.until(
+                ExpectedConditions.elementToBeClickable(AssetService));
+
+        scrollIntoView(Asset);
+        jsClick(Asset);
+		
+}
+	
+	
+	
+	
 	
 	
 	
