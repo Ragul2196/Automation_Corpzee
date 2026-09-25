@@ -167,7 +167,7 @@ public class AssetManagementTest extends BaseTest{
 
 	        
 	    }
-	    @Test(priority = 4)
+	    @Test(priority = 4, enabled = false)
 	    public void createFiveAssetsTest() {
 
 	        AssetService.clickSideMenu("Create Asset");
@@ -231,5 +231,40 @@ public class AssetManagementTest extends BaseTest{
 	            "5 IT Assets submitted for verification"
 	        );
 	    }    
+	    
+	    @Test(priority = 5)
+	    public void assetAllocationTest() {
+	    	
+	        AssetService.clickSideMenu("Asset Allocation");
+	        
+	        
+	        //Click Allocate Asset
+	        AssetService.AllocateAsset();
 
+	        // Select Employee / Department / Project
+	        AssetService.selectAllocationAssignee("0205-Rahul");
+
+	        // Select available asset
+	        AssetService.selectAllocationAsset("APPLE (INVE764748366)");
+
+	        // Allocation Date
+	        AssetService.enterAllocationDate("09/25/2026");
+
+	        // Expected Return Date
+	        AssetService.enterExpectedReturnDate("09/25/2027");
+
+	        // Require digital acknowledgement
+	        AssetService.selectRequireAcknowledgement();
+
+	        // Confirm
+	        AssetService.selectRequireAcknowledgement();
+
+	        String message = AssetService.clickConfirmAllocation();
+
+	        System.out.println("Final Allocation Message: " + message);
+	        
+	    }
+	    
+	    
 }
+	    

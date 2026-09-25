@@ -5,7 +5,7 @@
     <classes>
       <class name="com.corpzee.tests.AssetManagementTest">
         <methods>
-          <include name="createFiveAssetsTest"/>
+          <include name="assetAllocationTest"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.corpzee.tests.AssetManagementTest -->
