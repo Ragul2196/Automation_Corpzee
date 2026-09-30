@@ -169,7 +169,7 @@ public class AssetManagementTest extends BaseTest{
 	    }
 	    @Test(priority = 4, enabled = false)
 	    public void createFiveAssetsTest() {
-
+	    	
 	        AssetService.clickSideMenu("Create Asset");
 
 	        AssetService.selectPurchaseInvoice("INV001 (ABC Technologies)");
@@ -232,7 +232,7 @@ public class AssetManagementTest extends BaseTest{
 	        );
 	    }    
 	    
-	    @Test(priority = 5)
+	    @Test(priority = 5, enabled = false)
 	    public void assetAllocationTest() {
 	    	
 	        AssetService.clickSideMenu("Asset Allocation");
@@ -241,7 +241,7 @@ public class AssetManagementTest extends BaseTest{
 	        //Click Allocate Asset
 	        AssetService.AllocateAsset();
 
-	        // Select Employee / Department / Project
+	        // Select Employee / Department / Projects
 	        AssetService.selectAllocationAssignee("0205-Rahul");
 
 	        // Select available asset
@@ -265,6 +265,34 @@ public class AssetManagementTest extends BaseTest{
 	        
 	    }
 	    
-	    
+	    @Test(priority = 6, enabled = true)
+	    public void assetReturnTest() {
+	    	
+	    	 AssetService.clickSideMenu("Asset Return");
+		        
+		        
+		        //Click Allocate Asset
+		        AssetService.AssetReturn();
+		        
+		        AssetService.selectReturnAssignee("0205-Rahul");
+
+		            AssetService.selectAssetToReturn( "Dell");
+
+		            AssetService.enterReturnDate("09/30/2026");
+
+		            AssetService.selectReturnReason("Employee Exit");
+
+		            AssetService.selectReturnCondition("Damaged (Send to Scrap)");
+
+		            AssetService.enterReturnNotes("Given Asset is not working");
+
+		            String message = AssetService.clickProcessReturn();
+
+		            System.out.println(
+		                "Asset Return Message: " + message
+		            );
+	    		
+	    	
+	    }
 }
 	    

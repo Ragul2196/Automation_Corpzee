@@ -1,25 +1,36 @@
 package com.corpzee.base;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseTest {
 
-	public static WebDriver driver;
-	public static WebDriverWait wait;
+    public static WebDriver driver;
+    public static WebDriverWait wait;
 
     public void launchBrowser() {
 
         System.setProperty("webdriver.chrome.driver",
                 "C:\\Users\\ragulsacariya\\Automation\\chromedriver-win64\\chromedriver.exe");
 
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+
+        // Automatically allow browser notifications
+        Map<String, Object> prefs = new HashMap<>();
+        prefs.put("profile.default_content_setting_values.notifications", 1);
+
+        options.setExperimentalOption("prefs", prefs);
+
+        driver = new ChromeDriver(options);
 
         driver.manage().window().maximize();
 
@@ -53,15 +64,11 @@ public class BaseTest {
         ((JavascriptExecutor) driver).executeScript(
                 "arguments[0].scrollIntoView({block:'center'});",
                 element);
-
     }
 
     public void closeBrowser() {
 
         if (driver != null)
-
             driver.quit();
-
     }
-
 }

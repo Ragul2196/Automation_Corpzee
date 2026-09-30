@@ -15,7 +15,6 @@ public class FligtBooking extends BaseTest {
     public void setUp() {
         launchBrowser();   // This initializes driver and wait
     }
-
     @Test
     public void verifyFlightBookingSearch() {
 

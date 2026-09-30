@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
+<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-25T15:48:47 IST" name="Default suite" finished-at="2026-09-25T15:49:16 IST" duration-ms="28529">
+  <suite started-at="2026-09-30T18:09:00 IST" name="Default suite" finished-at="2026-09-30T18:09:24 IST" duration-ms="23613">
     <groups>
     </groups>
-    <test started-at="2026-09-25T15:48:47 IST" name="Default test" finished-at="2026-09-25T15:49:16 IST" duration-ms="28529">
+    <test started-at="2026-09-30T18:09:00 IST" name="Default test" finished-at="2026-09-30T18:09:24 IST" duration-ms="23613">
       <class name="com.corpzee.tests.AssetManagementTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.corpzee.tests.AssetManagementTest@131ef10]" started-at="2026-09-25T15:48:47 IST" name="setup" finished-at="2026-09-25T15:49:11 IST" duration-ms="23343" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.corpzee.tests.AssetManagementTest@41a2befb]" started-at="2026-09-30T18:09:00 IST" name="setup" finished-at="2026-09-30T18:09:20 IST" duration-ms="19681" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="assetAllocationTest()[pri:5, instance:com.corpzee.tests.AssetManagementTest@131ef10]" started-at="2026-09-25T15:49:11 IST" name="assetAllocationTest" finished-at="2026-09-25T15:49:16 IST" duration-ms="5056" status="PASS">
+        <test-method signature="assetReturnTest()[pri:6, instance:com.corpzee.tests.AssetManagementTest@41a2befb]" started-at="2026-09-30T18:09:20 IST" name="assetReturnTest" finished-at="2026-09-30T18:09:24 IST" duration-ms="3865" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- assetAllocationTest -->
+        </test-method> <!-- assetReturnTest -->
       </class> <!-- com.corpzee.tests.AssetManagementTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

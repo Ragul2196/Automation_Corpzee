@@ -34,90 +34,90 @@ public class AssetPages {
 		this.actions = new Actions(driver);
 	}
 
-	public By Sidemenu = By.className("asset-sidebar");
+	private By Sidemenu = By.className("asset-sidebar");
 
-	public By AddCatagory = By.xpath(
+	private By AddCatagory = By.xpath(
 			"/html/body/app-root/app-base/div/div/div/div/app-asset-base/div/div[2]/app-asset-category/div/app-dynamic-report-page/div/app-dynamic-report-page-header/div/div/div[2]/button");
 
 	// Category Name
-	public By categoryName = By.cssSelector("input[formControlName='name']");
+	private By categoryName = By.cssSelector("input[formControlName='name']");
 
 	// Code
-	public By categoryCode = By.cssSelector("input[formControlName='code']");
+	private By categoryCode = By.cssSelector("input[formControlName='code']");
 
 	// Status
-	public By status = By.cssSelector("p-select[formControlName='status']");
+	private By status = By.cssSelector("p-select[formControlName='status']");
 
 	// Submit Categories button
-	public By submitButton = By.xpath("//button[contains(.,'Submit Categories')]");
+	private By submitButton = By.xpath("//button[contains(.,'Submit Categories')]");
 
 	// Alert message - change text if your actual message is different
-	public By successAlert = By
+	private By successAlert = By
 			.xpath("//*[contains(@class,'alert') or contains(@class,'toast') or contains(@role,'alert')]");
 
 	// Parent Category
-	public By parentCategory = By.cssSelector("p-select[formControlName='parentCategory']");
+	private By parentCategory = By.cssSelector("p-select[formControlName='parentCategory']");
 
 	// Sub-Category Name
-	public By subCategoryName = By.cssSelector("input[formControlName='name']");
+	private By subCategoryName = By.cssSelector("input[formControlName='name']");
 
 	// Auto-generated Code
-	public By subCategoryCode = By.cssSelector("input[formControlName='code']");
+	private By subCategoryCode = By.cssSelector("input[formControlName='code']");
 
 	// Status
-	public By substatus = By.cssSelector("p-select[formControlName='status']");
+	private By substatus = By.cssSelector("p-select[formControlName='status']");
 
 	// Submit Sub-Categories button
-	public By subsubmitButton = By.xpath("//button[contains(.,'Submit Sub-Categories')]");
+	private By subsubmitButton = By.xpath("//button[contains(.,'Submit Sub-Categories')]");
 
 	// Success / Alert message
-	public By subsuccessAlert = By
+	private By subsuccessAlert = By
 			.xpath("//*[contains(@role,'alert') or contains(@class,'alert') or contains(@class,'toast')]");
 
-	public By AddSubButton = By.xpath(
+	private By AddSubButton = By.xpath(
 			"/html/body/app-root/app-base/div/div/div/div/app-asset-base/div/div[2]/app-asset-subcategory/div/app-dynamic-report-page/div/app-dynamic-report-page-header/div/div/div[2]/button");
 
-	public By AddPurchase = By.xpath("//button[contains(normalize-space(), 'Add Purchase Entry')]");
+	private By AddPurchase = By.xpath("//button[contains(normalize-space(), 'Add Purchase Entry')]");
 
 	// Vendor Details
-	public By vendorName = By.xpath("//input[@placeholder='Enter Vendor Name']");
+	private By vendorName = By.xpath("//input[@placeholder='Enter Vendor Name']");
 
-	public By vendorMobile = By.xpath("//input[@placeholder='Enter 10-digit Mobile']");
+	private By vendorMobile = By.xpath("//input[@placeholder='Enter 10-digit Mobile']");
 
-	public By vendorEmail = By.xpath("//input[@placeholder='Enter Email']");
+	private By vendorEmail = By.xpath("//input[@placeholder='Enter Email']");
 
-	public By vendorState = By.xpath("//input[@placeholder='Enter State']");
+	private By vendorState = By.xpath("//input[@placeholder='Enter State']");
 
-	public By vendorCity = By.xpath("//input[@placeholder='Enter City']");
+	private By vendorCity = By.xpath("//input[@placeholder='Enter City']");
 
-	public By invoiceNumber = By.xpath("//input[@placeholder='Enter Invoice Number']");
+	private By invoiceNumber = By.xpath("//input[@placeholder='Enter Invoice Number']");
 
 	// Invoice Date
-	public By invoiceDate = By.xpath("//p-datepicker//input[@placeholder='Select Invoice Date']");
+	private By invoiceDate = By.xpath("//p-datepicker//input[@placeholder='Select Invoice Date']");
 
 	// Purchase Value
-	public By purchaseValue = By.id("currency-inr-purchase");
+	private By purchaseValue = By.id("currency-inr-purchase");
 
 	// GST Type
-	public By gstType = By.cssSelector("p-select");
+	private By gstType = By.cssSelector("p-select");
 
 	// GST Percentage
-	public By gstPercentage = By.xpath("//input[@placeholder='e.g. 18']");
+	private By gstPercentage = By.xpath("//input[@placeholder='e.g. 18']");
 
 	// GST Amount
-	public By gstAmount = By.id("currency-inr-gst");
+	private By gstAmount = By.id("currency-inr-gst");
 
 	// Total Amount
-	public By totalAmount = By.id("currency-inr-total");
+	private By totalAmount = By.id("currency-inr-total");
 
 	// Total Quantity
-	public By totalQuantity = By.id("totalQuantity");
+	private By totalQuantity = By.id("totalQuantity");
 
 	// Invoice File
-	public By invoiceFile = By.cssSelector("input[type='file']");
+	private By invoiceFile = By.cssSelector("input[type='file']");
 
 	// Save Entry
-	public By saveEntryButton = By.xpath(
+	private By saveEntryButton = By.xpath(
 			"/html/body/app-root/app-base/div/div/div/div/app-asset-base/div/div[2]/app-asset-purchase-details/div/div/div/div/div[2]/button[2]");
 
 	// Create Assets
@@ -212,7 +212,55 @@ public class AssetPages {
 		    ".p-toast-detail"
 		);
 	
-	
+		
+
+//////////////////////////
+//////Asset Retrun////////
+/// /////////////////////
+		
+		//Click process Return
+		private By Return = By.xpath("/html/body/app-root/app-base/div/div/div/div/app-asset-base/div/div[2]/app-asset-return/div/div/app-dynamic-report-page/div/app-dynamic-report-page-header/div/div/div[2]/button");
+		
+		
+		// Search by Assignee Name
+		private By returnAssignee = By.xpath(
+		    "//label[contains(normalize-space(),'Search by Assignee Name')]" +
+		    "/following-sibling::p-select[1]"
+		);
+
+		// Select Assets to Return
+		private By returnAssets = By.xpath(
+		    "//label[contains(normalize-space(),'Select Assets to Return')]" +
+		    "/following-sibling::p-multiselect[1]"
+		);
+
+		// Return Date
+		private By returnDate = By.xpath(
+		    "//label[contains(normalize-space(),'Return Date')]" +
+		    "/following-sibling::p-datepicker[1]//input"
+		);
+
+		// Reason for Return
+		private By returnReason = By.xpath(
+		    "//label[contains(normalize-space(),'Reason for Return')]" +
+		    "/following-sibling::p-select[1]"
+		);
+
+		// Asset Condition
+		private By returnCondition = By.xpath(
+		    "//label[contains(normalize-space(),'Asset Condition Upon Return')]" +
+		    "/following-sibling::p-select[1]"
+		);
+
+		// Return Notes
+		private By returnNotes = By.xpath(
+		    "//input[@placeholder='Any additional notes about the return condition...']"
+		);
+
+		// Process Return
+		private By processReturnButton = By.xpath(
+		    "//button[.//span[normalize-space()='Process Return']]"
+		);
 	
 	
 	
@@ -457,7 +505,8 @@ public class AssetPages {
 
 		wait.until(ExpectedConditions.elementToBeClickable(button)).click();
 	}
-
+	
+	
 ////////////////////////////////////    
 	// CREATE Asset's
 ////////////////////////////////////
@@ -782,4 +831,192 @@ public class AssetPages {
 			    ).click();
 			
 	}
+	
+	
+	public void AssetReturn() {
+		
+		WebElement button = wait.until(
+				ExpectedConditions.presenceOfElementLocated(Return)
+				);
+		
+		wait.until(
+		        ExpectedConditions.elementToBeClickable(button)
+		    ).click();
+	}
+	
+	
+	public void selectReturnAssignee(String assignee) {
+
+	    WebElement dropdown = wait.until(
+	        ExpectedConditions.elementToBeClickable(returnAssignee)
+	    );
+
+	    dropdown.click();
+
+	    By option = By.xpath(
+	        "//li[contains(@class,'p-select-option') and " +
+	        "normalize-space()='" + assignee + "']"
+	    );
+
+	    wait.until(
+	        ExpectedConditions.elementToBeClickable(option)
+	    ).click();
+	}
+	
+	
+	public void selectAssetToReturn(String assetName) {
+
+	    WebElement dropdown = wait.until(
+	        ExpectedConditions.elementToBeClickable(returnAssets)
+	    );
+
+	    dropdown.click();
+
+	    By option = By.xpath(
+	        "//li[contains(@class,'p-multiselect-option') and " +
+	        "normalize-space()='" + assetName + "']"
+	    );
+
+	    wait.until(
+	        ExpectedConditions.elementToBeClickable(option)
+	    ).click();
+
+	    // Close dropdown
+	    dropdown.click();
+	}
+	
+	
+	public void enterReturnDate(String date) {
+
+	    WebElement element = wait.until(
+	        ExpectedConditions.elementToBeClickable(returnDate)
+	    );
+
+	    element.click();
+
+	    element.sendKeys(Keys.CONTROL, "a");
+	    element.sendKeys(date);
+	    element.sendKeys(Keys.TAB);
+	}
+	
+	
+	public void selectReturnReason(String reason) {
+
+	    WebElement dropdown = wait.until(
+	        ExpectedConditions.elementToBeClickable(returnReason)
+	    );
+
+	    dropdown.click();
+
+	    By option = By.xpath(
+	        "//li[contains(@class,'p-select-option') and " +
+	        "normalize-space()='" + reason + "']"
+	    );
+
+	    wait.until(
+	        ExpectedConditions.elementToBeClickable(option)
+	    ).click();
+	}
+	
+	public void selectReturnCondition(String condition) {
+
+	    WebElement dropdown = wait.until(
+	        ExpectedConditions.elementToBeClickable(returnCondition)
+	    );
+
+	    dropdown.click();
+
+	    By option = By.xpath(
+	        "//li[contains(@class,'p-select-option') and " +
+	        "contains(normalize-space(),'" + condition + "')]"
+	    );
+
+	    wait.until(
+	        ExpectedConditions.elementToBeClickable(option)
+	    ).click();
+	}
+	
+	
+	public void enterReturnNotes(String notes) {
+
+	    WebElement element = wait.until(
+	        ExpectedConditions.elementToBeClickable(returnNotes)
+	    );
+
+	    element.clear();
+	    element.sendKeys(notes);
+	}
+	
+	
+	public String clickProcessReturn() {
+
+	    WebElement button = wait.until(
+	        ExpectedConditions.presenceOfElementLocated(
+	            processReturnButton
+	        )
+	    );
+
+	    ((JavascriptExecutor) driver).executeScript(
+	        "arguments[0].scrollIntoView({block:'center'});",
+	        button
+	    );
+
+	    wait.until(
+	        ExpectedConditions.elementToBeClickable(button)
+	    ).click();
+
+	    return getToastMessage();
+	}
+	
+	public String getToastMessage() {
+
+	    WebElement toast = new WebDriverWait(
+	        driver,
+	        Duration.ofSeconds(5)
+	    ).until(
+	        ExpectedConditions.visibilityOfElementLocated(
+	            toastMessage
+	        )
+	    );
+
+	    String summary = "";
+	    String detail = "";
+
+	    try {
+	        summary = toast.findElement(toastSummary)
+	                .getText()
+	                .trim();
+	    } catch (Exception e) {
+	        // Summary not available
+	    }
+
+	    try {
+	        detail = toast.findElement(toastDetail)
+	                .getText()
+	                .trim();
+	    } catch (Exception e) {
+	        // Detail not available
+	    }
+
+	    if (!detail.isEmpty()) {
+	        System.out.println(
+	            "Toast Type: " + summary
+	        );
+
+	        System.out.println(
+	            "Toast Message: " + detail
+	        );
+
+	        return detail;
+	    }
+
+	    System.out.println(
+	        "Toast Type: " + summary
+	    );
+
+	    return summary;
+	}
 }
+
+
+
